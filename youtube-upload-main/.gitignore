@@ -1,0 +1,6 @@
+.venv
+test.py
+*.log
+youtube-upload/__pycache__
+dist/
+*.egg-info
