@@ -15,13 +15,13 @@ with open("youtube-upload/__init__.py") as f:
 setup(
     name="youtube-upload",
     version=version,
-    author="offish",
-    author_email="overutilization@gmail.com",
+    author="stratty7",
+    author_email="joelstratrich@gmail.com",
     description="Upload videos to YouTube using geckodriver, Firefox profiles and Selenium.",
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
-    url="https://github.com/offish/opplast",
+    url="https://github.com/stratty7/youtube-upload",
     download_url="https://github.com/offish/opplast/tarball/v" + version,
     packages=["youtube-upload"],
     classifiers=[
