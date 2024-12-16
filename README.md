@@ -2,13 +2,6 @@
 
 Upload videos to YouTube using geckodriver, Firefox profiles and Selenium. Easy to setup and use. Inspired by [youtube_uploader_selenium](https://github.com/linouk23/youtube_uploader_selenium).
 
-## Installing
-Install and update using pip:
-
-```
-pip install --upgrade opplast
-```
-
 ## geckodriver
 Download [geckodriver](https://github.com/mozilla/geckodriver/releases) and place it inside `C:\Users\USERNAME\AppData\Local\Programs\Python\Python37`. If you are using another version of Python, you place it inside there. This only works if Python is added to PATH and it is the correct version.
 
