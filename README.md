@@ -1,18 +1,6 @@
-# opplast
-[![Version](https://img.shields.io/pypi/v/opplast.svg)](https://pypi.org/project/opplast)
-[![License](https://img.shields.io/github/license/offish/opplast.svg)](https://github.com/offish/opplast/blob/master/LICENSE)
-[![Stars](https://img.shields.io/github/stars/offish/opplast.svg)](https://github.com/offish/opplast/stargazers)
-[![Issues](https://img.shields.io/github/issues/offish/opplast.svg)](https://github.com/offish/opplast/issues)
-[![Size](https://img.shields.io/github/repo-size/offish/opplast.svg)](https://github.com/offish/opplast)
-[![Discord](https://img.shields.io/discord/467040686982692865?color=7289da&label=Discord&logo=discord)](https://discord.gg/t8nHSvA)
-[![Code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
-
-[![Donate Steam](https://img.shields.io/badge/donate-steam-green.svg)](https://steamcommunity.com/tradeoffer/new/?partner=293059984&token=0-l_idZR)
-[![Donate PayPal](https://img.shields.io/badge/donate-paypal-blue.svg)](https://www.paypal.me/0ffish)
+# youtube-upload
 
 Upload videos to YouTube using geckodriver, Firefox profiles and Selenium. Easy to setup and use. Inspired by [youtube_uploader_selenium](https://github.com/linouk23/youtube_uploader_selenium).
-
-"Opplast" is norwegian for "upload".
 
 ## Installing
 Install and update using pip:
@@ -48,6 +36,9 @@ Upload(root_profile_directory: str, executable_path: str = "geckodriver", timeou
 
 `options: FirefoxOptions` - optional options for webdriver. Use `headless` if you want to hide browser.
 
+`short: bool` - wether or not the video to be uploaded is a short form or long. If it is short form it must be less than 60 seconds
+
+It should handle monitized channels and fill out the checks properly.
 
 ## Usage
 ```python
@@ -65,8 +56,8 @@ was_uploaded, video_id = upload.upload(
     description="My YouTube Description",
     thumbnail=r"C:/path/to/thumbnail.jpg",
     tags=["these", "are", "my", "tags"],
-    only_upload=False # If True will not set title, description or anything else. 
-    # Might be useful if you want to do it manually or by using the YouTube API.
+    only_upload=False, # If True will not set title, description or anything else. 
+    short=True, # Must be less than 60 seconds.
 )
 
 if was_uploaded:
